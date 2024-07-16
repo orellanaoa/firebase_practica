@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "name": "FIREBASE-app-ivansalguero-adrianaorellana",
+    "slug": "FIREBASE-app-ivansalguero-adrianaorellana",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/gatito.jpeg",
+      "resizeMode": "contain",
+      "backgroundColor": "#000"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.orellana.ad.FIREBASEappivansalgueroadrianaorellana"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "25ed39c8-f2e0-45a6-9f86-7ef2380b08fd"
+      }
+    }
+  }
+}
