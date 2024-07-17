@@ -7,7 +7,7 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/gatito.jpeg",
+      "image": "./assets/mono.png",
       "resizeMode": "contain",
       "backgroundColor": "#000"
     },

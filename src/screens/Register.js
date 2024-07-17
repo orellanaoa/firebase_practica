@@ -7,7 +7,10 @@ import InputComponent from '../components/InputComponent';
 import CustomFlecha from '../components/ButtonBack';
 import { validateName, validatePhone, validatePassword } from '../utils/Validation';
 
+//Definicion del componente de registrar
 const Register = ({ navigation }) => {
+
+    //Creamos variable para almacenar datos 
     const initialUserState = {
         firstName: '',
         lastName: '',
@@ -16,13 +19,15 @@ const Register = ({ navigation }) => {
         password: '',
     };
 
+    //Estado local para almacenar usuarios
     const [user, setUser] = useState(initialUserState);
 
     const handleRegister = async () => {
         const { firstName, lastName, phone, email, password } = user;
 
+        //Validamos cada campo
         if (!validateName(firstName)) {
-            Alert.alert('Error', 'El nombre solo puede contener letras.');
+            Alert.alert('Error', '  El nombre solo puede contener letras.');
             return;
         }
 
@@ -42,9 +47,11 @@ const Register = ({ navigation }) => {
         }
 
         try {
+            //Creamos peticion de autenticacion a firebase
             const userCredential = await createUserWithEmailAndPassword(auth, email, password);
             const currentUser = userCredential.user;
 
+            //Creamos un nuevo documento dentro de la coleccion de usuarios 
             await addDoc(collection(database, 'Usuarios'), {
                 uid: currentUser.uid,
                 firstName,

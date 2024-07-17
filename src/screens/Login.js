@@ -13,6 +13,7 @@ const Login = ({ navigation }) => {
 
     // Función para manejar el inicio de sesión
     const handleLogin = () => {
+        
         // Usar Firebase Authentication para iniciar sesión con el correo y contraseña
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
